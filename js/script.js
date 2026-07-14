@@ -191,31 +191,27 @@ lightbox.onclick = (e) => {
 
 const releaseDate = new Date("May 26, 2026 00:00:00").getTime();
 
-setInterval(() => {
+function updateCountdown() {
+
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
+if (!days || !hours || !minutes || !seconds) {
+    alert("Countdown elements not found");
+    return;
+}
 
 const now = new Date().getTime();
 const distance = releaseDate - now;
 
-if(distance <= 0){
+days.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+hours.textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+minutes.textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+seconds.textContent = Math.floor((distance % (1000 * 60)) / 1000);
 
-document.getElementById("days").innerHTML = "00";
-document.getElementById("hours").innerHTML = "00";
-document.getElementById("minutes").innerHTML = "00";
-document.getElementById("seconds").innerHTML = "00";
-
-return;
 }
 
-document.getElementById("days").innerHTML =
-Math.floor(distance/(1000*60*60*24));
-
-document.getElementById("hours").innerHTML =
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-document.getElementById("minutes").innerHTML =
-Math.floor((distance%(1000*60*60))/(1000*60));
-
-document.getElementById("seconds").innerHTML =
-Math.floor((distance%(1000*60))/1000);
-
-},1000);
+updateCountdown();
+setInterval(updateCountdown, 1000);
