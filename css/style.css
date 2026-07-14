@@ -31,68 +31,37 @@ display:block;
 /*==============================
 HEADER
 ==============================*/
-
-header{
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
 position:fixed;
 top:0;
 left:0;
 width:100%;
-height:80px;
-padding:0 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(8,12,22,.82);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(0,229,255,.2);
+background:#0b0b12;
 z-index:1000;
 }
 
-.logo{
-font-family:'Orbitron',sans-serif;
-font-size:34px;
-font-weight:800;
-color:#fff;
-letter-spacing:2px;
-}
-
-.logo span{
-color:#00e5ff;
-text-shadow:
-0 0 8px #00e5ff,
-0 0 20px #00e5ff,
-0 0 40px #00e5ff;
-}
-
-nav{
+.navbar{
 display:flex;
-gap:28px;
+gap:25px;
+align-items:center;
 }
 
-nav a{
-font-size:15px;
+.navbar a{
+color:#fff;
+font-size:18px;
+text-decoration:none;
 font-weight:600;
-transition:.35s;
-position:relative;
 }
 
-nav a:hover{
+#menu-btn{
+display:none;
+font-size:30px;
 color:#00e5ff;
-}
-
-nav a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-8px;
-width:0%;
-height:2px;
-background:#00e5ff;
-transition:.35s;
-}
-
-nav a:hover::after{
-width:100%;
+cursor:pointer;
 }
 
 /*==============================
@@ -515,4 +484,34 @@ transition:all .8s ease;
 .show{
 opacity:1;
 transform:translateY(0);
+}
+@media (max-width:768px){
+
+#menu-btn{
+display:block;
+}
+
+.navbar{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#111;
+display:none;
+flex-direction:column;
+padding:20px;
+}
+
+.navbar.active{
+display:flex;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
 }
