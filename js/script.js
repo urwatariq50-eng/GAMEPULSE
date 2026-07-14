@@ -131,3 +131,14 @@ slides[currentSlide].classList.add("active");
 },5000);
 
 }
+/* LOADER */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").classList.add("hide");
+
+},2000);
+
+});
