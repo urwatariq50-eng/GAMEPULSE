@@ -189,7 +189,7 @@ lightbox.onclick = (e) => {
 };
 // GTA VI COUNTDOWN
 
-const releaseDate = new Date("December 31, 2026 23:59:59").getTime();
+const releaseDate = new Date("November 19, 2026 18:00:00").getTime();
 function updateCountdown() {
 
 const days = document.getElementById("days");
