@@ -1074,3 +1074,43 @@ font-family:'Orbitron',sans-serif;
 color:#ddd;
 line-height:1.7;
 }
+/* GTA VI Stats */
+
+.gta-stats{
+    padding:90px 8%;
+    background:#0b1020;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(0,229,255,.2);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.35s;
+    backdrop-filter:blur(12px);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    border-color:#00e5ff;
+    box-shadow:0 0 30px rgba(0,229,255,.45);
+}
+
+.stat-card h3{
+    color:#00e5ff;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.stat-card p{
+    color:#ddd;
+    font-size:17px;
+}
