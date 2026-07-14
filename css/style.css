@@ -562,3 +562,31 @@ font-size:48px;
 }
 
 }
+.newsletter{
+background:#0b1020;
+text-align:center;
+}
+
+.newsletter-box{
+max-width:700px;
+margin:30px auto;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.newsletter-box input{
+flex:1;
+min-width:260px;
+padding:16px 20px;
+border:none;
+border-radius:50px;
+font-size:16px;
+outline:none;
+}
+
+.socials{
+background:#070b14;
+text-align:center;
+}
