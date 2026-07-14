@@ -1009,3 +1009,28 @@ margin-top:10px;
 font-size:15px;
 color:#ddd;
 }
+/* BACK TO TOP BUTTON */
+
+#topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+display:none;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#00e5ff;
+color:#07111c;
+font-size:26px;
+font-weight:bold;
+cursor:pointer;
+z-index:999;
+box-shadow:0 0 20px #00e5ff;
+transition:.3s;
+}
+
+#topBtn:hover{
+transform:translateY(-5px) scale(1.08);
+box-shadow:0 0 35px #00e5ff;
+}
