@@ -812,7 +812,9 @@ img{
     transition:transform .4s ease;
 }
 
-.news-card:hover img,
+.news-card:hover img{
+    transform:scale(1.08);
+}
 
 .hero{
     position:relative;
