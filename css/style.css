@@ -958,3 +958,54 @@ color:#ccc;
 from{width:0;}
 to{width:100%;}
 }
+/* GTA VI COUNTDOWN */
+
+.countdown{
+margin-top:45px;
+text-align:center;
+}
+
+.countdown h2{
+font-size:22px;
+margin-bottom:25px;
+color:#00e5ff;
+font-family:'Orbitron',sans-serif;
+letter-spacing:2px;
+}
+
+.countdown-box{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.countdown-box div{
+width:110px;
+padding:18px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(0,229,255,.35);
+border-radius:18px;
+backdrop-filter:blur(12px);
+box-shadow:0 0 20px rgba(0,229,255,.18);
+transition:.3s;
+}
+
+.countdown-box div:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px #00e5ff;
+}
+
+.countdown-box span{
+display:block;
+font-size:38px;
+font-weight:700;
+font-family:'Orbitron',sans-serif;
+color:#00e5ff;
+}
+
+.countdown-box p{
+margin-top:10px;
+font-size:15px;
+color:#ddd;
+}
