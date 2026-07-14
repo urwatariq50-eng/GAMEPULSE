@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://urwatariq50-eng.github.io/GAMEPULSE/sitemap.xml
