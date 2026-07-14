@@ -100,43 +100,32 @@ LEVEL UP YOUR GAMING EXPERIENCE
 Breaking gaming news, honest reviews, game guides, trailers and everything gamers love.
 
 </p>
+
 <div class="countdown">
+    <h2>GTA VI RELEASE COUNTDOWN</h2>
 
-<h2>GTA VI RELEASE COUNTDOWN</h2>
+    <div class="countdown-box">
+        <div>
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
 
-const releaseDate = new Date("May 26, 2026 00:00:00").getTime();
+        <div>
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
 
-setInterval(() => {
+        <div>
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
 
-const now = new Date().getTime();
-const distance = releaseDate - now;
-
-if(distance <= 0){
-
-document.getElementById("days").innerHTML = "00";
-document.getElementById("hours").innerHTML = "00";
-document.getElementById("minutes").innerHTML = "00";
-document.getElementById("seconds").innerHTML = "00";
-
-document.querySelector(".countdown h2").innerHTML =
-"🎉 GTA VI IS OUT NOW!";
-
-return;
-
-}
-
-const days=Math.floor(distance/(1000*60*60*24));
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-const seconds=Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("days").innerHTML=days;
-document.getElementById("hours").innerHTML=hours;
-document.getElementById("minutes").innerHTML=minutes;
-document.getElementById("seconds").innerHTML=seconds;
-
-},1000);
-
+        <div>
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</div>
 <input
 type="text"
 class="search"
