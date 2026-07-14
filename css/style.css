@@ -690,3 +690,31 @@ width:100%;
 }
 
 }
+nav a.active{
+color:#00e5ff;
+border-bottom:2px solid #00e5ff;
+padding-bottom:5px;
+}
+
+.news-card{
+transition:.35s;
+}
+
+.news-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,229,255,.45);
+}
+
+.card-btn{
+transition:.3s;
+}
+
+.card-btn:hover{
+background:#00e5ff;
+color:#000;
+box-shadow:0 0 20px #00e5ff;
+}
+
+.hero h1{
+text-shadow:0 0 20px #00e5ff;
+}
