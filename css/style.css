@@ -505,7 +505,54 @@ padding:20px;
 .navbar.active{
 display:flex;
 }
+/* SEARCH BAR */
 
+.search-box{
+display:flex;
+justify-content:center;
+align-items:center;
+margin:35px auto;
+max-width:650px;
+width:100%;
+}
+
+.search{
+width:100%;
+padding:16px 20px;
+font-size:17px;
+border:none;
+outline:none;
+border-radius:50px 0 0 50px;
+background:#fff;
+color:#111;
+}
+
+.search-box button{
+width:65px;
+height:57px;
+border:none;
+background:#00e5ff;
+color:#111;
+font-size:22px;
+border-radius:0 50px 50px 0;
+cursor:pointer;
+box-shadow:0 0 20px #00e5ff;
+}
+
+/* LOGO */
+
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:38px;
+font-weight:800;
+}
+
+.logo span{
+color:#00e5ff;
+text-shadow:
+0 0 12px #00e5ff,
+0 0 35px #00e5ff;
+}
 .hero{
 padding-top:120px;
 }
