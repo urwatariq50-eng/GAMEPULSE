@@ -90,3 +90,19 @@ card.style.display=text.includes(value)?"block":"none";
 });
 
   }
+// ==============================
+// Mobile Menu
+// ==============================
+
+const menuBtn = document.querySelector("#menu-btn");
+const navbar = document.querySelector(".navbar");
+
+if (menuBtn && navbar) {
+    menuBtn.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
+
+    window.addEventListener("scroll", () => {
+        navbar.classList.remove("active");
+    });
+}
