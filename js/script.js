@@ -89,7 +89,7 @@ card.style.display=text.includes(value)?"block":"none";
 
 });
 
-  }
+}
 // ==============================
 // Mobile Menu
 // ==============================
@@ -186,3 +186,35 @@ lightbox.onclick = (e) => {
         lightbox.style.display = "none";
     }
 };
+// GTA VI COUNTDOWN
+
+const releaseDate = new Date("May 26, 2026 00:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const distance = releaseDate - now;
+
+if(distance <= 0){
+
+document.getElementById("days").innerHTML = "00";
+document.getElementById("hours").innerHTML = "00";
+document.getElementById("minutes").innerHTML = "00";
+document.getElementById("seconds").innerHTML = "00";
+
+return;
+}
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
