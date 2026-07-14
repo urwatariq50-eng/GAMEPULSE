@@ -783,24 +783,6 @@ text-shadow:0 0 20px #00e5ff;
     color:#fff;
 }
 
-.play-btn{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#00e5ff;
-    color:#000;
-    font-size:30px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    box-shadow:0 0 20px #00e5ff;
-}
-
 .video-card:hover{
     transform:translateY(-8px);
     box-shadow:0 0 25px rgba(0,229,255,.4);
@@ -831,9 +813,6 @@ img{
 }
 
 .news-card:hover img,
-.video-card:hover img{
-    transform:scale(1.08);
-}
 
 .hero{
     position:relative;
