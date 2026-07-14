@@ -104,32 +104,38 @@ Breaking gaming news, honest reviews, game guides, trailers and everything gamer
 
 <h2>GTA VI RELEASE COUNTDOWN</h2>
 
-<div class="countdown-box">
+const releaseDate = new Date("May 26, 2026 00:00:00").getTime();
 
-<div>
-<span id="days">00</span>
-<p>Days</p>
-</div>
+setInterval(() => {
 
-<div>
-<span id="hours">00</span>
-<p>Hours</p>
-</div>
+const now = new Date().getTime();
+const distance = releaseDate - now;
 
-<div>
-<span id="minutes">00</span>
-<p>Minutes</p>
-</div>
+if(distance <= 0){
 
-<div>
-<span id="seconds">00</span>
-<p>Seconds</p>
-</div>
+document.getElementById("days").innerHTML = "00";
+document.getElementById("hours").innerHTML = "00";
+document.getElementById("minutes").innerHTML = "00";
+document.getElementById("seconds").innerHTML = "00";
 
-</div>
+document.querySelector(".countdown h2").innerHTML =
+"🎉 GTA VI IS OUT NOW!";
 
-</div>
-<div class="search-box">
+return;
+
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
 
 <input
 type="text"
@@ -271,7 +277,44 @@ Latest News
 </section>
 
 <section class="trailer">
+<section class="system-requirements">
 
+<div class="section-title">
+<h2>PC System Requirements</h2>
+<p>Expected GTA VI Requirements</p>
+</div>
+
+<div class="games-grid">
+
+<div class="game-card">
+<div class="game-info">
+<h3>Minimum</h3>
+<p>
+OS: Windows 10 64-bit<br>
+CPU: Ryzen 5 3600<br>
+RAM: 16GB<br>
+GPU: RTX 2060<br>
+Storage: 150GB SSD
+</p>
+</div>
+</div>
+
+<div class="game-card">
+<div class="game-info">
+<h3>Recommended</h3>
+<p>
+OS: Windows 11<br>
+CPU: Ryzen 7 5800X<br>
+RAM: 32GB<br>
+GPU: RTX 4080<br>
+Storage: SSD
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
 <div class="section-title">
 <h2>Official GTA VI Trailer</h2>
 <p>Watch Rockstar's latest trailer.</p>
