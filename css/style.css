@@ -900,8 +900,7 @@ z-index:2;
 
 #loader{
 position:fixed;
-top:0;
-left:0;
+inset:0;
 width:100vw;
 height:100vh;
 background:#070b14;
@@ -917,7 +916,7 @@ z-index:999999;
 #loader.hide{
 opacity:0;
 visibility:hidden;
-transition:.6s;
+transition:.6s ease;
 }
 
 #loader h1{
@@ -925,6 +924,7 @@ font-family:'Orbitron',sans-serif;
 font-size:48px;
 font-weight:800;
 text-align:center;
+margin-bottom:25px;
 }
 
 #loader span{
@@ -933,12 +933,11 @@ text-shadow:0 0 20px #00e5ff;
 }
 
 .loading-bar{
-width:80%;
-max-width:320px;
+width:85%;
+max-width:300px;
 height:8px;
 background:#222;
 border-radius:30px;
-margin-top:30px;
 overflow:hidden;
 }
 
